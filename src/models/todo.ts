@@ -2,13 +2,15 @@ import mongoose, { Schema, Document } from 'mongoose';
 
 export interface Todo extends Document {
     title: string;
-    completed: boolean;
+    createdOn: number,
+    updatedOn: number,
+    state: TodoState,
 }
 
-enum TodoState {
-    TODO = 'todo',
-    IN_PROGRESS = 'in_progress',
-    DONE = 'done',
+export enum TodoState {
+    TODO = "todo",
+    IN_PROGRESS = "progress",
+    DONE = "done",
 }
 
 const todoSchema: Schema = new Schema({
