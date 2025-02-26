@@ -1,0 +1,24 @@
+### Get All Tasks
+GET /
+HOST: http://localhost:3000/api/v1
+
+## Get Specific Task
+GET /{{taskId}}
+HOST: http://localhost:3000/api/v1
+
+### Add Task
+POST /add
+HOST: http://localhost:3000/api/v1
+
+{
+    "title": "Hello World",
+    "state": "todo"
+}
+
+### Update Task
+#PUT /update/{{taskId}}
+#HOST: http://localhost:3000/api/v1
+#
+#{
+#    "state": "done"
+#}
